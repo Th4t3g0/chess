@@ -1,0 +1,57 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chess-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chessboard {
+            width: 400px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .even-row .square:nth-child(even),
+        .odd-row .square:nth-child(odd) {
+            background-color: #bb6e6e;
+        }
+
+        .even-row .square:nth-child(odd),
+        .odd-row .square:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .square.white {
+            background-color: #fff;
+            color: #bb6e6e;
+        }
+
+        .square.black {
+            background-color: #bb6e6e;
+            color: #fff;
+        }
+
+        .chess-piece {
+            width: 100%;
+            height: 100%;
+            /* pointer-events: none; /* Prevent chess pieces from intercepting mouse events */ */
+        }
